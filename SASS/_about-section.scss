@@ -1,0 +1,118 @@
+.about-container {
+    h2 {
+        display: inline-block;
+        color: $white;
+        font-family: $pattaya;
+        padding: 10px;
+    }
+
+    h3 {
+        letter-spacing: 2px;
+        color: $white;
+        font-family: $pattaya;
+        animation-name: moveh3Right;
+        animation-duration: 2s;
+        animation-fill-mode: backwards;
+        margin-bottom: 0;
+        padding: 0.5rem;
+        text-align: left;
+    }
+
+    .h3-animate {
+        animation-name: moveh3Right;
+        animation-delay: .5s;
+    }
+
+    .h3-animate2 {
+        animation-delay: 1.5s;
+        animation-duration: 2s;
+    }
+
+    p {
+        color: $white;
+        animation-name: moveTextRight;
+        animation-fill-mode: backwards;
+        animation-duration: 2s;
+        background-color: #292929;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+    .mayor-pic {
+        animation-name: moveTextLeft;
+        animation-fill-mode: backwards;
+        animation-duration: 2s;
+    }
+
+    .text-animate {
+        animation-delay: .5s;
+    }
+
+    .text-animate2 {
+        animation-delay: 1.5s;
+    }
+}
+
+
+
+@keyframes moveh3Right {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveh3Left {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveTextRight {
+    0% {
+        visibility: 0;
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveTextLeft {
+    0% {
+
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .mayor {
+        flex-direction: column !important;
+
+        .mayor-pic {
+            margin-top: 20px;
+        }
+    }
+}

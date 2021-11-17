@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Pattaya&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+//fonts variabels
+$roboto:'Roboto',
+sans-serif;
+$pattaya: 'Pattaya',
+sans-serif;
+$henny: 'Henny Penny',
+sans-serif;
+
+//color variables
+$purple: #9453a6;
+$green: #8cbf3f;
+$green-dark: #425a1e;
+$yellow: #f2cc0f;
+$white: #f2f2f2;
+$black: #0d0d0d;
+
+
+//grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+.header-highlight-green {
+    color: $green;
+}
+
+.header-highlight-purple {
+    color: $purple;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.font-familyP {
+    font-family: $pattaya;
+}
+
+.font-familyH {
+    font-family: $henny;
+}
+
+.font-familyR {
+    font-family: $roboto;
+}
+
+.color-white {
+    color: $white;
+}

@@ -1,0 +1,31 @@
+@import 'utilities';
+@import 'navbar';
+@import 'carousel';
+@import 'intro';
+@import 'whatIsMardiGras';
+@import 'mediaSection';
+@import 'sponsers';
+@import 'cards';
+@import 'about-section';
+@import 'faq';
+@import 'gallery';
+@import 'quiz';
+@import 'contact';
+@import 'footer';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $roboto;
+    background-color: $black;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.9)), url(/Images/background.jpg);
+    object-fit: cover;*/
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+
+}

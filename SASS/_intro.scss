@@ -1,0 +1,87 @@
+.container {
+    padding-bottom: 3em;
+
+    #container-text {
+        font-family: $pattaya;
+        color: $green;
+        text-align: center;
+
+    }
+
+    .text-time {
+        color: $white;
+        font-size: 1.2rem;
+        display: flex;
+
+        .countdown {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $purple;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 12px 4px 21px -5px rgba(255, 255, 255, 0.66);
+            -webkit-box-shadow: 12px 4px 21px -5px rgba(255, 255, 255, 0.66);
+            -moz-box-shadow: 12px 4px 21px -5px rgba(255, 255, 255, 0.66);
+            transition: all .5s;
+            animation-name: flip;
+            animation-duration: 4s;
+
+
+            .time {
+                text-align: center;
+
+                .timeWithBgc {
+                    background: linear-gradient(rgb(173, 173, 173) 50%, $white 50%, $white 100%);
+                    border-radius: 5px;
+                    padding: 5px;
+                    color: $black;
+                }
+            }
+
+            .time:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            &:hover {
+
+                transform: scale(1.1);
+            }
+        }
+
+        p {
+            margin-left: 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #container-text {
+        font-size: 3rem !important;
+    }
+
+    .text-time {
+        flex-direction: column;
+        text-align: center;
+
+        .countdown {
+            width: 13em;
+            margin: 2em auto;
+        }
+    }
+}
+
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+
+    50% {
+        transform: rotateX(360deg);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}

@@ -1,0 +1,129 @@
+.media-header {
+    font-family: $pattaya;
+    color: $white;
+}
+
+
+
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 60vh;
+    margin: 0 auto;
+
+    .panel {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: $white;
+        cursor: pointer;
+        flex: 0.5;
+        margin: 10px;
+        position: relative;
+        transition: flex 1.5s ease-out;
+        text-align: center;
+
+        &.active {
+            flex: 5;
+            border: 20px solid $white;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+}
+
+.videos-container {
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-around;
+    width: 90vw;
+
+    iframe {
+        margin: 20px;
+        border: 10px solid white;
+    }
+
+
+}
+
+
+@keyframes myAnim {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    55% {
+        animation-timing-function: ease-in;
+        transform: translateY(-65px);
+    }
+
+    72% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    81% {
+        animation-timing-function: ease-in;
+        transform: translateY(-28px);
+    }
+
+    90% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    95% {
+        animation-timing-function: ease-in;
+        transform: translateY(-8px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .gallery-container {
+
+        width: 100vw !important;
+
+        .panel.active {
+            border: none;
+        }
+
+        .panel:nth-of-type(2),
+        .panel:nth-of-type(5) {
+            display: none;
+        }
+    }
+
+    .videos-container {
+        flex-direction: column;
+        align-items: center;
+
+        iframe {
+            margin-top: 30px;
+            width: 90vw;
+        }
+    }
+
+    .panel {
+        flex: 2;
+
+        &.active {
+            flex: 0.5;
+        }
+    }
+}
